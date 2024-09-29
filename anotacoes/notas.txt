@@ -1,0 +1,41 @@
+Rotas dentro do next 
+
+Se for feita uma reuisição para dentro da pasta de rotas sem espeecificar o arquivo
+o next vai buscar sempre o arquivo com o nome index.
+
+Criando rotas dinâmicas 
+
+No caso para que next saiba que a rota recebe um parametro dinâmico o nome da pasta onde ela esta contida deve estar entre
+colchetes por exemplo dentro da pasta rotas eu criri a pasta [id] por cusa dessees colchetes se eu tentar acessar o arquivo 
+buscar que etsa dentro dela em uma ruisição eu posso mandar um dado pela url ou não 
+
+por exemplo:
+
+localhost:3000/rotas/123/buscar 
+
+ou 
+
+localhost:3000/rotas/id/buscar 
+
+caso eu precise acessar o id que foi passado pela rota eu vou precisar usar um recurso do next chamado 
+useRouter. Que cria um objeto para receber os dados que são enviados atráves da rotas, no exemplo que 
+coloquei acima o nome do objeto e "pathname" e a informação que foi solicitada vai estar dentro do atributo 
+query.
+
+para enviar mais de um parametro e necessário criar mais um arquivo com a mesma dinâmica porque ele vai ler os 
+parâmetros entre colchetes como parte de uma url. Se eu fizer uma pesquisa na url enviando "122 / josé" ele vai 
+entrar dentro do arquivo [nome] porque ele já recebeu o id que o primeiro parâmetro pede. Então pela lógica dele 
+o segundo é para o segundo arquivo e assim por diante.
+
+[id] / [nome] 
+
+
+
+ 
+
+
+
+
+
+
+
